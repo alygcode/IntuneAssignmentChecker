@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+
+nav {
+  background-color: #f8f9fa;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0d6efd;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.chart-container {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+}
