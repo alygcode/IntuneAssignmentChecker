@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import DashboardHome from './components/DashboardHome';
+import { TableDataProvider } from './contexts/TableDataContext';
 import PoliciesPage from './pages/PoliciesPage';
 import GroupsPage from './pages/GroupsPage';
 import DevicesPage from './pages/DevicesPage';
@@ -32,7 +33,11 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/" element={<DashboardHome />} />
+          <Route path="/" element={
+            <TableDataProvider>
+              <DashboardHome />
+            </TableDataProvider>
+          } />
           <Route path="/policies" element={<PoliciesPage />} />
           <Route path="/groups" element={<GroupsPage />} />
           <Route path="/devices" element={<DevicesPage />} />
